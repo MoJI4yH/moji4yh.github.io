@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Резюме — Виталий Шундров</title>
@@ -10,36 +10,79 @@
             background-color: #f4f6f8;
             color: #2c3e50;
             margin: 0;
-            padding: 40px;
+            padding: 40px 10px;
             line-height: 1.6;
         }
+
         .container {
             max-width: 900px;
             margin: auto;
             background: #fff;
-            padding: 40px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            padding: 20px 40px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
+
+        .pretty-link {
+            display: inline-block;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .pretty-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background-color: #3498db;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: right;
+        }
+
+        .pretty-link:hover {
+            color: #2c3e50;
+        }
+
+        .pretty-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
         h1 {
             font-size: 32px;
             margin-bottom: 5px;
         }
+
         h2 {
             border-bottom: 2px solid #3498db;
             padding-bottom: 5px;
-            margin-top: 40px;
-        }
-        h3 {
             margin-top: 20px;
-            color: #2980b9;
         }
-        p, ul {
+
+        h3 {
+            color: #2980b9;
+            margin: 0px;
+        }
+
+        p {
+            margin: 0px;
+        }
+
+        p,
+        ul {
             margin-bottom: 15px;
         }
+
         ul {
             padding-left: 20px;
         }
+
         code {
             background: #ecf0f1;
             padding: 2px 6px;
@@ -48,13 +91,14 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>👨‍💻 Виталий Шундров — Senior .NET Developer</h1>
         <p>
             📍 Пенза, Россия<br>
-            📧 <a href="mailto:shundrov1991@gmail.com">shundrov1991@gmail.com</a><br>
-            📱 <a href="https://t.me/shundrov1991" target="_blank">@shundrov1991</a><br>
+            📧 <a href="mailto:shundrov1991@gmail.com" class="pretty-link">shundrov1991@gmail.com</a><br>
+            📱 <a href="https://t.me/shundrov1991" class="pretty-link" target="_blank">@shundrov1991</a><br>
             🗓️ Опыт: 12+ лет<br>
             📅 График: Удалёнка, гибкий<br>
             🗣️ Русский (родной), английский (A2)
@@ -69,7 +113,7 @@
             <li><strong>Принципы и практики:</strong> <code>Agile</code>, <code>Code Review</code>, <code>Design Review</code>, <code>DDD</code>, <code>SOLID</code></li>
         </ul>
 
-        <h2>📌 Выжимка по опыту</h2>
+        <h2>📌</h2>
         <ul>
             <li><strong>Проектирование и разработка микросервисной архитектуры</strong>: создание и внедрение новых сервисов в высоконагруженных системах.</li>
             <li><strong>Разработка инфраструктурных решений</strong>: библиотеки-обёртки над сторонними компонентами, стандартизация и ускорение процесса создания сервисов.</li>
@@ -82,7 +126,7 @@
 
         <h2>🏢 Опыт работы</h2>
         <h3>Т-Банк</h3>
-        <p><em>Ведущий разработчик .NET | Ноябрь 2023 — настоящее время</em></p>
+        <p><em>Senior .NET Developer | Ноябрь 2023 — настоящее время</em></p>
 
         <h3>SmartCAT</h3>
         <p><em>Senior .NET Developer | Сентябрь 2021 — Октябрь 2023</em></p>
@@ -91,13 +135,17 @@
         <p><em>Solution Architect | Май 2018 — Июнь 2021</em></p>
 
         <h3>EPAM Systems</h3>
-        <p><em>Senior Developer | Август 2017 — Май 2018</em></p>
+        <p><em>Senior .NET Developer | Август 2017 — Май 2018</em></p>
 
         <h3>Моё Дело (ранее)</h3>
-        <p><em>Программист — Ведущий разработчик | 2012 — 2017</em></p>
+        <p><em>Junior — Senior .NET Developer | 2012 — 2017</em></p>
 
         <h2>🎓 Образование</h2>
-        <p><strong>Пензенский государственный университет</strong><br>Бакалавр, Программное обеспечение вычислительной техники и АСУ, 2012</p>
+        <p>
+            <strong>Пензенский государственный университет</strong><br>
+            Бакалавр, Программное обеспечение вычислительной техники и АСУ, 2012
+        </p>
     </div>
 </body>
+
 </html>
