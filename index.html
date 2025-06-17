@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме — Виталий Шундров</title>
     <style>
+        :root {
+            --base-font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --base-font-size: 12px;
+            }
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f6f8;
@@ -12,6 +22,7 @@
             margin: 0;
             padding: 5px;
             line-height: 1.6;
+            font-size: var(--base-font-size);
         }
 
         .container {
@@ -24,19 +35,22 @@
         }
 
         .contact-block {
-            font-size: 16px;
-            line-height: 1.6;
+            font-size: 1em;
         }
 
         .contact-line {
+            display: flex;
             align-items: center;
+            gap: 0.5em;
             margin-bottom: 6px;
-            color: inherit;
             text-decoration: none;
+            color: inherit;
+            flex-wrap: wrap;
         }
 
         .contact-line svg {
-            margin-right: 8px;
+            width: 1em;
+            height: 1em;
             flex-shrink: 0;
         }
 
@@ -71,24 +85,32 @@
         }
 
         h1 {
-            font-size: 32px;
+            font-size: 2em;
             margin-bottom: 5px;
             margin-top: 5px;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            flex-wrap: wrap;
+        }
+
+        h1 svg {
+            width: 1em;
+            height: 1em;
+            flex-shrink: 0;
         }
 
         h2 {
             border-bottom: 2px solid #3498db;
             padding-bottom: 5px;
             margin-top: 20px;
+            font-size: 1.4em;
         }
 
         h3 {
             color: #2980b9;
             margin: 0px;
-        }
-
-        p {
-            margin: 0px;
+            font-size: 1.2em;
         }
 
         p,
@@ -96,66 +118,92 @@
             margin-bottom: 15px;
         }
 
+        p {
+            margin: 0;
+        }
+
         ul {
             padding-left: 20px;
         }
 
         code {
-            background: #ecf0f1;
-            padding: 2px 6px;
+            background-color: #eaf4fb;
+            color: #2c3e50;
             border-radius: 4px;
+            padding: 1px 6px;
             font-family: monospace;
+            font-size: 0.9em;
+            border: 1px solid #3498db;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px 20px;
+            }
+
+            h1 {
+                font-size: 1.4em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            h3 {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
-
 <body>
     <div class="container">
-        <h1 style="align-items: center; font-size: 24px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
-                style="margin-right: 8px;">
+        <h1>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
                 <path d="M3 16l4-4-4-4M21 8l-4 4 4 4M14 4l-4 16" />
             </svg>
             Виталий Шундров — Senior .NET Developer
         </h1>
         <p class="contact-block">
             <span class="contact-line">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <path d="M21 10c0 6-9 13-9 13s-9-7-9-13a9 9 0 1 1 18 0z" />
                     <circle cx="12" cy="10" r="3" />
                 </svg>
                 Пенза, Россия
-            </span><br>
+            </span>
 
             <a href="mailto:shundrov1991@gmail.com" class="contact-line contact-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <rect x="2" y="4" width="20" height="16" rx="2" ry="2" />
                     <path d="M22 6L12 13L2 6" />
                 </svg>
                 shundrov1991@gmail.com
-            </a><br>
+            </a>
 
             <a href="https://t.me/shundrov1991" target="_blank" class="contact-line contact-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 240 240" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
                     <circle cx="120" cy="120" r="120" fill="#37AEE2" />
-                    <path d="M179.7 70.4L158.7 171.3c-1.6 7.2-5.8 9-11.7 5.6l-32.4-23.9-15.6 15 c-1.7 1.7-3.1 3.1-6.3 3.1l2.2-31.7 57.8-52c2.5-2.2-.6-3.4-3.9-1.2l-71.5 45.1 -30.8-9.6c-6.7-2.1-6.8-6.7 1.4-9.9l119.7-46.2c5.5-2 10.3 1.3 8.6 9.3z" fill="#fff" />
+                    <path d="M179.7 70.4L158.7 171.3c-1.6 7.2-5.8 9-11.7 5.6l-32.4-23.9-15.6 15
+                        c-1.7 1.7-3.1 3.1-6.3 3.1l2.2-31.7 57.8-52c2.5-2.2-.6-3.4-3.9-1.2l-71.5 45.1
+                        -30.8-9.6c-6.7-2.1-6.8-6.7 1.4-9.9l119.7-46.2c5.5-2 10.3 1.3 8.6 9.3z"
+                        fill="#fff" />
                 </svg>
                 @shundrov1991
-            </a><br>
+            </a>
 
             <span class="contact-line">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <path d="M8 7V3M16 7V3M3 11h18M5 5h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" />
                 </svg>
                 Опыт: 12+ лет
-            </span><br>
+            </span>
 
             <span class="contact-line">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
                     <line x1="16" y1="2" x2="16" y2="6" />
@@ -163,10 +211,10 @@
                     <line x1="3" y1="10" x2="21" y2="10" />
                 </svg>
                 График: Удалёнка, гибкий
-            </span><br>
+            </span>
 
             <span class="contact-line">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <path d="M12 3v18M5 9h14M9 5l-4 4 4 4M15 19l4-4-4-4" />
                 </svg>
@@ -174,47 +222,27 @@
             </span>
         </p>
 
-        <h2>
-            Профессиональные навыки
-        </h2>
+        <h2>Профессиональные навыки</h2>
         <ul>
-            <li><strong>Языки и платформы:</strong> <code>C#</code>, <code>.NET</code>, <code>T-SQL</code></li>
-            <li><strong>Базы данных:</strong> <code>MS SQL</code>, <code>PostgreSQL</code>, <code>MongoDB</code>, <code>Redis</code></li>
-            <li><strong>Интеграции и взаимодействие:</strong> <code>REST API</code>, <code>Apache Kafka</code>, <code>RabbitMQ</code>, <code>OpenTracing</code>, <code>SLA</code></li>
-            <li><strong>DevOps & Tools:</strong> <code>Docker</code>, <code>Git</code>, <code>GitLab</code>, <code>TeamCity</code>, <code>YouTrack</code>, <code>JIRA</code></li>
-            <li><strong>Принципы и практики:</strong> <code>Agile</code>, <code>Code Review</code>, <code>Design Review</code>, <code>DDD</code>, <code>SOLID</code></li>
+            <li><strong>Языки и платформы:</strong>  <code>C#</code> · <code>.NET</code> · <code>T-SQL</code></li>
+            <li><strong>Базы данных:</strong>  <code>MS SQL</code> · <code>PostgreSQL</code> · <code>MongoDB</code> · <code>Redis</code></li>
+            <li><strong>Интеграции:</strong>  <code>REST API</code> · <code>Apache Kafka</code> · <code>RabbitMQ</code> · <code>OpenTracing</code> · <code>SLA</code></li>
+            <li><strong>DevOps & Tools:</strong>  <code>Docker</code> · <code>Git</code> · <code>GitLab</code> · <code>TeamCity</code> · <code>YouTrack</code> · <code>JIRA</code></li>
+            <li><strong>Принципы:</strong>  <code>Agile</code> · <code>Code Review</code> · <code>Design Review</code> · <code>DDD</code> · <code>SOLID</code></li>
         </ul>
 
-        <h2>
-            Опыт и достижения
-        </h2>
+        <h2>Опыт и достижения</h2>
         <ul>
-            <li>
-                <strong>Проектирование и разработка микросервисной архитектуры</strong>: создание и внедрение новых сервисов в высоконагруженных системах.
-            </li>
-            <li>
-                <strong>Разработка инфраструктурных решений</strong>: библиотеки-обёртки над сторонними компонентами, стандартизация и ускорение процесса создания сервисов.
-            </li>
-            <li>
-                <strong>Интеграции и взаимодействие компонентов</strong>: настройка и использование <code>Apache Kafka</code> как шины сообщений; поддержка <code>HTTP REST</code> и асинхронных взаимодействий.
-            </li>
-            <li>
-                <strong>Оптимизация производительности</strong>: внедрение <code>SLA</code>-метрик (1 секунда ответа); совместная работа с DBA по оптимизации SQL-запросов.
-            </li>
-            <li>
-                <strong>Мониторинг и Observability</strong>: настройка <code>OpenTracing</code> (HTTP, базы данных, Kafka и др.).
-            </li>
-            <li>
-                <strong>DevOps участие</strong>: миграция сервисов на Linux + <code>Kestrel</code> в <code>Docker</code>; настройка <code>CI/CD</code>.
-            </li>
-            <li>
-                <strong>Командная работа</strong>: участие в <code>Code Review</code>, <code>Design Review</code>, работа по <code>Agile</code> (Scrum, Kanban).
-            </li>
+            <li><strong>Микросервисы:</strong> создание и внедрение в высоконагруженных системах.</li>
+            <li><strong>Инфраструктура:</strong> библиотеки-обёртки, стандарты.</li>
+            <li><strong>Интеграции:</strong> Kafka, HTTP REST, async.</li>
+            <li><strong>Оптимизация:</strong> SLA, запросы, работа с DBA.</li>
+            <li><strong>Monitoring:</strong> OpenTracing, метрики.</li>
+            <li><strong>DevOps:</strong> Docker, Kestrel, CI/CD.</li>
+            <li><strong>Команда:</strong> Code Review, Agile.</li>
         </ul>
 
-        <h2>
-            Опыт работы
-        </h2>
+        <h2>Опыт работы</h2>
         <h3>Т-Банк</h3>
         <p><em>Senior .NET Developer | Ноябрь 2023 — настоящее время</em></p>
 
@@ -230,14 +258,11 @@
         <h3>Моё Дело (ранее)</h3>
         <p><em>Junior — Senior .NET Developer | 2012 — 2017</em></p>
 
-        <h2>
-            Образование
-        </h2>
+        <h2>Образование</h2>
         <p>
             <strong>Пензенский государственный университет</strong><br>
             Бакалавр, Программное обеспечение вычислительной техники и АСУ, 2012
         </p>
     </div>
 </body>
-
 </html>
